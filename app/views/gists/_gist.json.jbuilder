@@ -1,0 +1,1 @@
+json.(gist, :title)
