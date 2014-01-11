@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   validates :username, :presence => true
 
   has_many :gists
+  has_many :favorites
+  has_many :favorite_gists, :through => :favorites, :source => :gist
 
   after_initialize :ensure_session_token
 

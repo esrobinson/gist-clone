@@ -5,7 +5,9 @@ GistClone.Routers.Gists = Backbone.Router.extend({
 	},
 
 	routes: {
-		"": "index"
+		"": "index",
+		"gists/new": "newGist",
+		"gists/:id": "editGist"
 	},
 
 	index: function(){
@@ -13,6 +15,17 @@ GistClone.Routers.Gists = Backbone.Router.extend({
 			 collection: GistClone.Collections.gists
 		 });
 		 this._swapView(view);
+	},
+
+	newGist: function(){
+		var view = new GistClone.Views.GistsForm
+		this._swapView(view);
+	},
+
+	editGist: function(id){
+		gist = GistClone.Collections.gists.get(id);
+		var view = new GistClone.Views.GistsForm({model: gist});
+		this._swapView(view);
 	},
 
 	_swapView: function(view){

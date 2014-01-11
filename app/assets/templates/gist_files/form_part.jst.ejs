@@ -1,0 +1,10 @@
+<h4>Gist File</h4>
+<label for="gist_gist_file_name">Name</label>
+<br>
+<input type="text" name="gist_files[][name]" id="gist_gist_file_name"
+	value="<%= gist_file ? gist_file.get('name') : "" %>">
+<br>
+<label for="gist_gist_file_body">Body</label>
+<br>
+<textarea name="gist_files[][body]" id="gist_gist_file_body"><%= gist_file ? gist_file.get('body') : "" %></textarea>
+<br>

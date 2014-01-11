@@ -1,4 +1,7 @@
-<li>
-	<p><%= gist.get('title') %></p>
-	<button data-id="<%= gist.id %>">Favorite!</button>
-</li>
+<a href="#/gists/<%= gist.id %>"><%= gist.get('title') %></a>
+<button class="favorite" data-type="add">
+	Favorite!
+</button>
+<button class="favorite hidden" data-type="remove">
+	Unfavorite!
+</button>

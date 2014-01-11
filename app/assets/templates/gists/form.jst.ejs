@@ -1,0 +1,10 @@
+<h2>Create Gist</h2>
+<form>
+	<label for="gist_title">Title</label>
+	<input type="text" name="gist[title]" id="gist_title"
+	value = "<%= gist ? gist.get('title') : "" %> ">
+	<div class="gist_files">
+	</div>
+	<button id="addFile">Add another file</button>
+	<input type="submit" value="Create Gist">
+</form>

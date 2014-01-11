@@ -6,7 +6,7 @@ window.GistClone = {
   initialize: function() {
   	GistClone.Collections.gists = new GistClone.Collections.Gists;
 		GistClone.Collections.gists.fetch({
-			success: function(){
+			success: function(data){
 				new GistClone.Routers.Gists({ $el: $('#content') });
 				Backbone.history.start();
 			}
